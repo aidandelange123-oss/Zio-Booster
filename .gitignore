@@ -1,3 +1,1 @@
-(js_features/README_VIDEO_BROWSER.md, js_features/video-browser-api.js, js_features/video-browser-demo.html are all source files - no build artifacts, dependencies, or temp files in the changes)
-
-(empty - output nothing)
+Nothing to output - the modified file is just README.md which is a source/config file and no build artifacts, dependencies, or temp files are present in the changes.
