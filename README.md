@@ -54,6 +54,45 @@ cd Zio-Booster
 python start-application.py
 ```
 
+### 🔄 Reinstall Git Files
+
+If you need to reset the repository to a clean state (e.g., to fix corrupted files or revert all changes):
+
+**Option 1: Quick Reset (keeps Git history)**
+```bash
+# Remove all tracked and untracked files except .git
+git clean -fdx
+git reset --hard HEAD
+```
+
+**Option 2: Complete Reinstall (fresh clone)**
+```bash
+# Delete the .git directory and reinstall
+rm -rf .git
+git init
+git remote add origin https://github.com/aidandelange123-oss/Zio-Booster.git
+git pull origin main
+```
+
+**Option 3: Windows Batch Script**
+Create a file named `reset_git.bat` with the following content:
+```batch
+@echo off
+echo Deleting Git files...
+rmdir /s /q .git
+del /q /s .gitignore
+echo Git files deleted. Run 'git clone' again to reinstall.
+pause
+```
+
+Then run:
+```bash
+reset_git.bat
+git clone https://github.com/aidandelange123-oss/Zio-Booster.git
+```
+
+⚠️ **Warning**: These commands will remove all local changes and Git history. Make sure to backup any important data before proceeding.
+
 ## 🎮 Usage
 
 ### FPS Booster Application
